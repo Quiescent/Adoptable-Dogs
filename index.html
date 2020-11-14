@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Project Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <style type="text/css">
+      /* fredoka-one-regular - latin */
+      @font-face {
+          font-family: 'Fredoka One';
+          font-style: normal;
+          font-weight: 400;
+          src: local('Fredoka One'), local('FredokaOne-Regular'),
+               url('./FredokaOne-Regular.ttf') format('truetype') /* Safari, Android, iOS */
+      }
+
+      body {
+          background-color: black;
+	  width: 100%;
+          margin: 0px;
+      }
+
+      .dog-details {
+          font-size: 8px;
+          margin-left: 5%;
+          margin-right: 5%;
+          width: 30%;
+      }
+
+      @media (min-width: 500px) {
+          .dog-details {
+              font-size: 11px;
+              margin-left: 10%;
+              margin-right: 10%;
+              width: 20%;
+          }
+      }
+
+      @media (min-width:1700px) {
+          .dog-details {
+              font-size: 16px;
+          }
+      }
+
+      h2 {
+          z-index: 2;
+          font-family: Fredoka One;
+          font-size: 20px;
+          font-weight: 100;
+	  margin-top: 0.15em;
+          display: block;
+          margin-bottom: 0.05em;
+          text-transform: capitalize;
+      }
+
+      @media (min-width: 500px) {
+          h2 {
+              font-family: Fredoka One;
+              font-size: 50px;
+              font-weight: 100;
+	      margin-top: 0.25em;
+              display: block;
+              margin-bottom: 0.05em;
+              text-transform: capitalize;
+          }
+      }
+
+      @media (min-width:1700px) {
+          h2 {
+              font-size: 80px;
+              margin-top: 2em;
+              margin-bottom: 0.25em;
+          }
+      }
+
+      .breeds {
+          font-size: 8px;
+          margin-left: 5%;
+      }
+
+      @media (min-width: 500px) {
+          .breeds {
+              font-size: 14px;
+              margin-left: 10%;
+          }
+      }
+
+      .dog-background {
+          padding-top: 100px;
+          padding-bottom: 33.5px;
+          background: url(./avi-richards-aYHgchNOsGY-unsplash-narrow.jpg);
+          position: absolute;
+          width: 100%;
+          left: 0px;
+          top: -82px;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          box-sizing: border-box;
+      }
+
+      @media (min-width: 500px) {
+          .dog-background {
+              padding-top: 100px;
+              padding-bottom: 33.5px;
+              background: url(./avi-richards-aYHgchNOsGY-unsplash.jpg);
+              position: absolute;
+              width: 100%;
+              left: 0px;
+              top: -82px;
+              background-size: 100%;
+              background-repeat: no-repeat;
+              box-sizing: border-box;
+          }
+      }
+
+      @media (min-width: 1700px) {
+          .dog-background {
+              padding-bottom: unset;
+              height: 1080px;
+          }
+      }
+
+      h1 {
+          z-index: 2;
+          padding: 0.5em;
+          margin-right: 60px;
+          margin-top: 0em;
+          padding-left: 0px;
+          margin-left: 60px;
+          margin-bottom: 33.5px;
+          font-family: Fredoka One;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 40px;
+          line-height: 60px;
+          text-transform: capitalize;
+
+          color: #2D2727;
+      }
+
+      @media (min-width: 500px) {
+          h1 {
+              font-size: 50px;
+              width: 509px;
+          }
+      }
+
+      @media (min-width: 700px) {
+          h1 {
+              margin-top: 0px;
+              padding: 0px;
+              padding-top: 100px;
+              font-size: 50px;
+              width: 509px;
+          }
+      }
+
+      @media (min-width: 1700px) {
+          h1 {
+              font-size: 60px;
+              margin-top: unset;
+              margin-left: 0px;
+              padding: 0px;
+              position: absolute;
+              width: 509px;
+              height: 122px;
+              left: 67px;
+              top: 422px;
+          }
+      }
+
+      .sub-title {
+          margin-left: 60px;
+          margin-right: 60px;
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          font-weight: bold;
+          line-height: 129%;
+
+          /* or 27px */
+          text-transform: capitalize;
+
+          color: #2D2727;
+      }
+
+      @media (min-width: 400px) {
+          .sub-title {
+              width: 355px;
+              font-size: 21px;
+              color: #E0DBD6;
+          }
+      }
+
+      @media (min-width: 1700px) {
+          .sub-title {
+              margin-top: unset;
+              margin-left: unset;
+              padding-top: 30px;
+              position: absolute;
+              height: 81px;
+              left: 67px;
+              top: 600px;
+          }
+      }
+
+      .adopt-now-button {
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 129%;
+
+          /* or 19px */
+
+          margin-top: 33.5px;
+          margin-left: 60px;
+          color: #E0DBD6;
+          height: 34px;
+          width: 112px;
+
+          background: rgba(45, 39, 39, 0.6);
+          border-radius: 9px;
+
+          cursor: pointer;
+          border: none;
+      }
+
+      @media (min-width: 1700px) {
+          .adopt-now-button {
+              margin-top: unset;
+              margin-left: unset;
+              position: absolute;
+              left: 67px;
+              top: 757px;
+          }
+      }
+
+      .adopt-now-button:hover {
+          background: rgba(45, 39, 39, 0.4);
+      }
+
+      .dog-listing {
+          background-color: black;
+          width: 100%;
+          color: white;
+          font-family: open sans;
+      }
+
+      @media (min-width: 1700px) {
+          margin-top: 1040px;
+      }
+
+      .description {
+          display: block;
+          margin-bottom: 0px;
+          margin-top: 0px;
+      }
+
+      @media (min-width: 500px) {
+          .description {
+              margin-bottom: 1em;
+              margin-top: 1em;
+          }
+      }
+
+      ul {
+          margin: 0px;
+      }
+
+      @media (min-width: 500px) {
+          ul {
+              margin-bottom: 1em;
+              margin-top: 1em;
+          }
+      }
+
+      .dog-photo {
+          align-self: center;
+          display: inline flex;
+          width: 60%;
+      }
+
+      @media(min-width: 1700px) {
+          .dog-photo {
+              width: 50%;
+          }
+      }
+
+      .dog {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 40px;
+      }
+
+      .rufus {
+          color: #95603d;
+      }
+
+      .rufus-background {
+          background-color: #352520;
+      }
+
+      .rufus-copy-text {
+          color: #b7b7bd;
+      }
+
+      .kylie-jane {
+          color: #26191a;
+      }
+
+      .kylie-jane-background {
+          background-color: #c79690;
+      }
+
+      .kylie-jane-copy-text {
+          color: #26191a;
+      }
+
+      .jacque {
+          color: #c5c7cb;
+      }
+
+      .jacque-background {
+          background-color: #965e27;
+      }
+
+      .jacque-copy-text {
+      }
+
+      .elsa {
+          color: #ad723e;
+      }
+
+      .elsa-background {
+          background-color: #372e1b;
+      }
+
+      .elsa-copy-text {
+      }
+
+      .colt {
+          color: #8297f9;
+      }
+
+      .colt-background {
+          background-color: #120a12;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="dog-background" >
+      <h1>Give A Pet The Home It Deserves</h1>
+
+      <div class="sub-title">
+        There are hundreds of cute, furry friends out there who are desperate for a home!
+      </div>
+
+      <button class="adopt-now-button">
+        Adopt now!
+      </button>
+    </div>
+
+    <div class="dog-listing" id="dogs">Fetching our adoptable dogs...</div>
+
+    <!-- Scripts -->
+    <script>
+      var apiData = [
+	  {
+	      name: 'Rufus',
+	      breeds: [
+		  'Lab',
+		  'German Shepard',
+		  'Border Collie'
+	      ],
+	      age: 'Adult',
+	      size: 'Medium',
+	      gender: 'Male',
+	      details: 'No Cats, No Dogs',
+	      photo: 'img/rufus.jpg'
+	  },
+	  {
+	      name: 'kylie jane',
+	      breeds: [
+		  'Shih Tzu'
+	      ],
+	      age: 'Puppy',
+	      size: 'Small',
+	      gender: 'Female',
+	      details: 'Neutered',
+	      photo: 'img/kylie.jpg'
+	  },
+	  {
+	      name: 'jacque ',
+	      breeds: [
+		  'Chihuahua',
+		  'Rat Terrier'
+	      ],
+	      age: 'Senior',
+	      size: 'Small',
+	      gender: 'Male',
+	      details: 'No Cats, No Dogs, Neutered, Special Medical Needs',
+	      photo: 'img/jacque.jpg'
+	  },
+	  {
+	      name: 'Elsa',
+	      breeds: [
+		  'Irish Wolfhound',
+		  'Wirehaired Terrier',
+		  'Staffordshire Terrier'
+	      ],
+	      age: 'Adult',
+	      size: 'Extra Large',
+	      gender: 'Female',
+	      details: 'Neutered',
+	      photo: 'img/elsa.jpg'
+	  },
+	  {
+	      name: 'Colt',
+	      breeds: [
+		  'Staffordshire Terrier',
+		  'Dalmation',
+		  'Lab'
+	      ],
+	      age: 'Puppy',
+	      size: 'Large',
+	      gender: 'Male',
+	      details: '',
+	      photo: 'img/colt.jpg'
+	  }
+      ];
+
+      // Create a list of available breeds, and how many of each breed there are
+      var getSummary = function () {
+          var breeds = apiData.reduce(function (breeds, dog) {
+              var missingBreeds = dog.breeds.filter(function (breed) {
+                  return !breeds[breed];
+              });
+              return missingBreeds.reduce(function (finalBreeds, breed) {
+                  if (finalBreeds[breed]) finalBreeds[breed]++;
+                  else finalBreeds[breed] = 1;
+                  return finalBreeds;
+              }, breeds);
+          }, {});
+	  return '<div class="breeds">' +
+              '<h2>Available Breeds</h2>' +
+	      '<ul>' +
+              Object
+              .entries(breeds)
+              .map(function (breedQuantity) {
+                  return '<li>' + breedQuantity[0] + ' (' + breedQuantity[1] + ')</li>'
+              })
+              .join('\n') +
+              '</ul>' +
+              '</div>';
+      };
+
+      // Create a list of adoptable dogs
+      var getDogs = function () {
+	  return apiData.map(function (dog) {
+              var dogDetails = dog.details.split(',').map(function (dog) { return dog.trim(); });
+              var dogTitleClass = dog.name.trim().toLowerCase().replace(' ', '-');
+              var dogBackgroundClass = dogTitleClass + '-background';
+              var dogCopyTextClass = dogTitleClass + '-copy-text';
+              return '<div class="dog ' + dogBackgroundClass + '">' +
+                  '<div class="dog-details">' +
+                  '<h2 class=' + dogTitleClass + '>' + dog.name + '</h2>' +
+                  '<div class=' + dogCopyTextClass + '>' +
+                  '<p class="description">' +
+                  '    	Age: ' + dog.age + '<br>' +
+                  '    	Size: ' + dog.size + '<br>' +
+                  '    	Gender: ' + dog.gender + '<br>' +
+                  '    	Breeds: ' + dog.breeds.join(', ') + '' +
+                  '</p>' +
+                  ((dogDetails.length && dogDetails[0] !== '') ? (
+                      '<strong>Other Details:</strong>' +
+                      '<ul>' +
+                          dogDetails.map(function (detail) { return '<li>' + detail + '</li>' }).join('\n') +
+                          '</ul>'
+                  ) : '') +
+                  '</div>' +
+                  '</div>' +
+                  '<img class="dog-photo" alt="A photo of ' + dog.name + '" src="' + dog.photo + '">' +
+                  '</div>';
+          }).join('');
+      };
+
+      // Load list of adoptable dogs into the DOM
+      var dogList = document.querySelector('#dogs');
+      dogList.innerHTML = /* getSummary() + */ getDogs()
+
+      function setDogListingMargin () {
+          var dogBackground = document.querySelector('.dog-background');
+          var dogs = document.querySelector('#dogs');
+          if (dogBackground && dogs) {
+              dogs.style.marginTop = parseInt(window.getComputedStyle(dogBackground).height) - 40 + 'px';
+          }
+      }
+
+      setDogListingMargin();
+      window.onresize = setDogListingMargin;
+    </script>
+  </body>
+</html>
