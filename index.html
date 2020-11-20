@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Adoptable Dogs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="./animate.css" />
     <!-- Styles -->
     <style type="text/css">
       /* fredoka-one-regular - latin */
@@ -16,10 +16,24 @@
           src: local('Fredoka One'), local('FredokaOne-Regular'),
                url('./FredokaOne-Regular.ttf') format('truetype') /* Safari, Android, iOS */
       }
+    
+    /* open-sans-regular - latin */
+    @font-face {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: url('./open-sans-v18-latin-regular.eot'); /* IE9 Compat Modes */
+      src: local(''),
+           url('./open-sans-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+           url('./open-sans-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+           url('./open-sans-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+           url('./open-sans-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+           url('./open-sans-v18-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+    }
 
       body {
           background-color: black;
-	  width: 100%;
+          width: 100%;
           margin: 0px;
       }
 
@@ -28,7 +42,7 @@
           margin-left: 5%;
           margin-right: 5%;
           width: 30%;
-      }
+    }
 
       @media (min-width: 500px) {
           .dog-details {
@@ -39,7 +53,7 @@
           }
       }
 
-      @media (min-width:1700px) {
+      @media (min-width:1440px) {
           .dog-details {
               font-size: 16px;
           }
@@ -50,7 +64,7 @@
           font-family: Fredoka One;
           font-size: 20px;
           font-weight: 100;
-	  margin-top: 0.15em;
+          margin-top: 0.15em;
           display: block;
           margin-bottom: 0.05em;
           text-transform: capitalize;
@@ -68,13 +82,21 @@
           }
       }
 
-      @media (min-width:1700px) {
+      @media (min-width:1440px) {
           h2 {
               font-size: 80px;
-              margin-top: 2em;
+              margin-top: 0.5em;
               margin-bottom: 0.25em;
           }
       }
+    
+    @media (min-width:1700px) {
+        h2 {
+            font-size: 80px;
+            margin-top: 2em;
+            margin-bottom: 0.25em;
+        }
+    }
 
       .breeds {
           font-size: 8px;
@@ -116,7 +138,7 @@
           }
       }
 
-      @media (min-width: 1700px) {
+      @media (min-width: 1440px) {
           .dog-background {
               padding-bottom: unset;
               height: 1080px;
@@ -158,7 +180,7 @@
           }
       }
 
-      @media (min-width: 1700px) {
+      @media (min-width: 1440px) {
           h1 {
               font-size: 60px;
               margin-top: unset;
@@ -168,9 +190,23 @@
               width: 509px;
               height: 122px;
               left: 67px;
-              top: 422px;
+              top: 340px;
           }
       }
+    
+    @media (min-width: 1700px) {
+        h1 {
+            font-size: 60px;
+            margin-top: unset;
+            margin-left: 0px;
+            padding: 0px;
+            position: absolute;
+            width: 509px;
+            height: 122px;
+            left: 67px;
+            top: 422px;
+        }
+    }
 
       .sub-title {
           margin-left: 60px;
@@ -196,17 +232,31 @@
           }
       }
 
-      @media (min-width: 1700px) {
+      @media (min-width: 1440px) {
           .sub-title {
               margin-top: unset;
               margin-left: unset;
               padding-top: 30px;
               position: absolute;
+              font-size: 15px;
               height: 81px;
               left: 67px;
-              top: 600px;
+              top: 450px;
+              width: 250px;
           }
       }
+    
+    @media (min-width: 1700px) {
+        .sub-title {
+            margin-top: unset;
+            margin-left: unset;
+            padding-top: 30px;
+            position: absolute;
+            height: 81px;
+            left: 67px;
+            top: 600px;
+        }
+    }
 
       .adopt-now-button {
           font-family: Open Sans;
@@ -230,15 +280,28 @@
           border: none;
       }
 
-      @media (min-width: 1700px) {
+      @media (min-width: 1440px) {
           .adopt-now-button {
               margin-top: unset;
               margin-left: unset;
               position: absolute;
               left: 67px;
-              top: 757px;
+              top: 568px;
+              font-size: 18px;
+              height: 50px;
+              width: 140px;
           }
       }
+    
+    @media (min-width: 1700px) {
+        .adopt-now-button {
+            margin-top: unset;
+            margin-left: unset;
+            position: absolute;
+            left: 67px;
+            top: 757px;
+        }
+    }
 
       .adopt-now-button:hover {
           background: rgba(45, 39, 39, 0.4);
@@ -248,10 +311,10 @@
           background-color: black;
           width: 100%;
           color: white;
-          font-family: open sans;
+          font-family: Open Sans;
       }
 
-      @media (min-width: 1700px) {
+      @media (min-width: 1440px) {
           margin-top: 1040px;
       }
 
@@ -285,7 +348,7 @@
           width: 60%;
       }
 
-      @media(min-width: 1700px) {
+      @media(min-width: 1440px) {
           .dog-photo {
               width: 50%;
           }
@@ -350,6 +413,38 @@
       .colt-background {
           background-color: #120a12;
       }
+    
+
+    @media (min-width: 1440px) {
+    .go-down {
+      position: absolute;
+      left: 50%;
+    }
+    .go-down:before {
+        content: '';
+        display: block;
+        position: absolute;
+        transform-origin: bottom right;
+        background: #fff;
+        width: 50px;
+        height: 5px;
+        border-radius: 10px;
+        transform: translate(-34%, -50%) rotateZ(-45deg);
+    }
+    
+    .go-down:after {
+        content: '';
+        display: block;
+        position: absolute;
+        transform-origin: bottom right;
+        background: #fff;
+        width: 50px;
+        height: 5px;
+        border-radius: 10px;
+        transform-origin: bottom left;
+        transform: translate(-76%, -50%) rotateZ(45deg);
+    }
+    }
     </style>
   </head>
 
@@ -360,10 +455,12 @@
       <div class="sub-title">
         There are hundreds of cute, furry friends out there who are desperate for a home!
       </div>
-
+      
       <button class="adopt-now-button">
         Adopt now!
       </button>
+      
+      <div class="go-down animate__animated animate__fadeInDown animate__delay-2s"></div>
     </div>
 
     <div class="dog-listing" id="dogs">Fetching our adoptable dogs...</div>
@@ -501,6 +598,15 @@
               dogs.style.marginTop = parseInt(window.getComputedStyle(dogBackground).height) - 40 + 'px';
           }
       }
+    
+    function setArrowTop () {
+        var arrow = document.querySelector('.go-down');
+        if (arrow) {
+            arrow.style.top = window.innerHeight + 'px';
+        }
+    }
+    
+    setArrowTop();
 
       setDogListingMargin();
       window.onresize = setDogListingMargin;
